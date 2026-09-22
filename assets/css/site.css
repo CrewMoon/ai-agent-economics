@@ -406,3 +406,69 @@ footer.site .wrap-wide { display: flex; justify-content: space-between; gap: 14p
   .abstract { padding-left: 16px; }
   figure img { padding: 6px; }
 }
+
+/* ---------- resource links ---------- */
+.links {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-faint);
+  margin: 0 0 18px;
+}
+
+.links a { border-bottom: 1px solid transparent; }
+.links a:hover { border-bottom-color: var(--accent); }
+.links .sep { color: var(--rule); margin: 0 7px; }
+
+.article-header .links { font-size: 14.5px; margin: 14px 0 0; }
+
+/* ---------- news ---------- */
+.news { list-style: none; padding: 0; margin: 0; }
+
+.news li {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.news li:last-child { border-bottom: none; }
+
+.news .date {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+  color: var(--ink-faint);
+  padding-top: 3px;
+  white-space: nowrap;
+}
+
+.news .entry { font-size: 16.5px; color: var(--ink-soft); }
+
+/* ---------- bibtex copy button ---------- */
+details.bib summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+
+.copybtn {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid var(--rule);
+  color: var(--ink-faint);
+  padding: 4px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color .15s, color .15s;
+}
+
+.copybtn:hover { border-color: var(--accent); color: var(--accent); }
+.copybtn[data-copied="1"] { border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 760px) {
+  .news li { grid-template-columns: 1fr; gap: 6px; }
+  .news .date { padding-top: 0; }
+}
