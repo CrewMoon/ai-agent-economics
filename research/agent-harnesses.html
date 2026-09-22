@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Do Agent Harnesses Create Value? — AI Agent Economics</title>
+<meta name="description" content="Separating planning guidance from release control in stateful LLM agents, and pricing each against the liability assigned to an erroneous acceptance.">
+<script>try{var l=localStorage.getItem('aae-lang');if(l==='zh'){document.documentElement.dataset.lang='zh';document.documentElement.lang='zh-Hans';}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="brand" href="../index.html">AI Agent Economics</a>
+    <button class="langtoggle" type="button">中文</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="article-header">
+    <p class="eyebrow">
+      <span data-lang="en">Paper 04 · Attribution &amp; control</span>
+      <span data-lang="zh">论文 04 · 归因与控制</span>
+    </p>
+    <h1>How Do Agent Harnesses Create Value? Planning Information and Release Control in Stateful LLM Agents</h1>
+    <p class="authors">Yukun Zhang · Kemu Xu · Yishen Chen</p>
+    <p class="venue">
+      <span data-lang="en">Working paper · 2026 · Two Retail experiments and an Airline pilot in τ²-bench</span>
+      <span data-lang="zh">工作论文 · 2026 · τ²-bench 中的两个 Retail 实验与一个 Airline 试点</span>
+    </p>
+  </div>
+
+  <figure class="figure-hero">
+    <img src="../assets/img/p4/hero.png" alt="Episode timeline with guidance, executor, oracle scoring and terminal verifier, plus the outcome matrix and scenario-value formula">
+    <figcaption>
+      <b><span data-lang="en">Episode timeline, outcome measures, and scenario value.</span><span data-lang="zh">回合时间线、结果度量与情景价值。</span></b>
+      <span data-lang="en">Guidance acts before execution; the terminal verifier acts after oracle scoring and can only change columns, not rows. Scenario value nets the success gain and the avoided false passes against the added inference cost, at a given liability per false pass.</span>
+      <span data-lang="zh">指导在执行前生效，终端验证器在 oracle 评分之后生效，且只能改变列而不能改变行。情景价值在给定每次错误放行的责任损失下，用成功率收益与避免的错误放行减去新增推理成本。</span>
+    </figcaption>
+  </figure>
+
+  <section>
+    <h2><span data-lang="en">Abstract</span><span data-lang="zh">摘要</span></h2>
+    <div class="abstract">
+      <p data-lang="en">Agent harnesses supply planning guidance, organize execution, and check completion. We study how these components affect success, erroneous acceptance, and cost in two Retail experiments and an Airline pilot in τ²-bench. The primary comparison pairs prewritten task-specific plans (Fixed) with shuffled policy text matched in word count (Sham), isolating the contribution of guidance content. Across 265 matched cells, Fixed improves oracle-verified success by 7.17 percentage points (90% task-clustered bootstrap interval, 1.15–13.36 points), with gains concentrated in higher-complexity tasks. A read-only terminal verifier rejects 61% of Retail oracle-invalid episodes while withholding 17% of correct ones, at less than one cent of additional cost per episode. Which component matters more depends on the loss assigned to erroneous acceptance: at low liability the planning gain dominates; at high liability the verifier's avoided false passes dominate — and a standalone verifier captures nearly all the false-pass benefit of the full planning-plus-verification stack at a fraction of its cost.</p>
+
+      <p data-lang="zh">Agent harness 提供规划指导、组织执行并检查完成情况。我们在 τ²-bench 的两个 Retail 实验与一个 Airline 试点中，研究这些组件如何影响成功率、错误接受与成本。主要比较是把预先写好的任务专属方案（Fixed）与字数配平的打乱策略文本（Sham）配对，从而分离出「指导内容」本身的贡献。在 265 个配对格上，Fixed 使 oracle 验证的成功率提高 7.17 个百分点（90% 任务聚类自助区间 1.15–13.36），收益集中在复杂度更高的任务上。一个只读的终端验证器拒绝了 61% 的 Retail oracle 无效回合，同时误拦了 17% 的正确回合，每回合新增成本不足一美分。哪个组件更重要，完全取决于错误接受所对应的损失：责任较低时规划收益占优，责任较高时验证器避免的错误放行占优——而单独部署验证器，就能以完整「规划＋验证」方案的一小部分成本，拿到其几乎全部的错误放行收益。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span data-lang="en">Key findings</span><span data-lang="zh">核心发现</span></h2>
+    <ol class="findings">
+      <li>
+        <span data-lang="en"><strong>Guidance content carries the effect, not guidance volume.</strong> Sham text is matched to Fixed in word count and wrapper, so the 7.17-point gap across 265 matched cells is attributable to what the plan says rather than to how much text the agent receives.</span>
+        <span data-lang="zh"><strong>起作用的是指导的内容，而不是指导的体量。</strong>Sham 文本在字数与封装形式上与 Fixed 完全配平，因此 265 个配对格上 7.17 个百分点的差距，只能归因于方案说了什么，而非代理收到了多少文字。</span>
+      </li>
+      <li>
+        <span data-lang="en"><strong>Correctness, claiming, and acceptance need separate measures.</strong> A verifier can withhold an invalid result but can also reject a correct one; the Retail verifier rejects 61% of oracle-invalid episodes while withholding 17% of correct ones.</span>
+        <span data-lang="zh"><strong>「正确」「宣称完成」「被接受」必须分开度量。</strong>验证器既能拦下无效结果，也会拒绝正确结果：Retail 验证器拒绝了 61% 的 oracle 无效回合，同时误拦 17% 的正确回合。</span>
+      </li>
+      <li>
+        <span data-lang="en"><strong>The ranking of components is a function of liability, not of benchmark score.</strong> At low loss per erroneous acceptance the planning gain dominates; at high loss the verifier's avoided false passes dominate. The same measurements support opposite deployment recommendations.</span>
+        <span data-lang="zh"><strong>组件的优劣排序取决于责任大小，而不是 benchmark 分数。</strong>每次错误接受的损失较低时，规划收益占优；损失较高时，验证器避免的错误放行占优。同一组测量结果可以支持完全相反的部署建议。</span>
+      </li>
+      <li>
+        <span data-lang="en"><strong>The cheap component captures most of the safety value.</strong> A standalone verifier — under one cent per episode — captures nearly all the false-pass benefit of the full planning-plus-verification stack, at a fraction of its cost.</span>
+        <span data-lang="zh"><strong>便宜的那个组件拿走了大部分安全价值。</strong>单独部署的验证器每回合成本不到一美分，却能拿到完整「规划＋验证」方案几乎全部的错误放行收益，而成本只是其中一小部分。</span>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2><span data-lang="en">Figures</span><span data-lang="zh">图表</span></h2>
+
+    <figure>
+      <img src="../assets/img/p4/fig1.png" alt="Forest plot of model-specific Fixed minus Sham differences with bootstrap intervals and a pooled diamond">
+      <figcaption>
+        <b><span data-lang="en">Baseline success and Fixed–Sham planning effects in Retail.</span><span data-lang="zh">Retail 中的基线成功率与 Fixed–Sham 规划效应。</span></b>
+        <span data-lang="en">(a) Minimal oracle-success rate by model, which orders the rows in both panels. (b) Model-specific Fixed–Sham differences with 90% task-clustered percentile bootstrap intervals (5,000 draws); the diamond is the pooled result over four models and 265 matched cells across 23 tasks. Qwen and Kimi have similar baselines but different planning responses.</span>
+        <span data-lang="zh">(a) 各模型在 Minimal 配置下的 oracle 成功率，两个面板的行序均以此排列。(b) 各模型的 Fixed–Sham 差异及 90% 任务聚类分位自助区间（5,000 次抽样）；菱形为四个模型、23 个任务上 265 个配对格的合并结果。Qwen 与 Kimi 基线相近，但对规划的反应不同。</span>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="../assets/img/p4/fig2.png" alt="Configuration outcomes, verifier rejection decomposition, and scenario value as a function of liability">
+      <figcaption>
+        <b><span data-lang="en">Configuration outcomes, verifier rejections, and liability scenarios.</span><span data-lang="zh">配置结果、验证器拒绝与责任情景。</span></b>
+        <span data-lang="en">(a) Pooled oracle-success and false-pass rates for the seven shared-Retail configurations. (b) Verifier outcomes within oracle-invalid and oracle-correct episodes: rejected, false pass, not asserted, and accepted. (c) Mean scenario value of each addition relative to Minimal in the high-risk stratum, as a function of the liability per false pass, on log scales.</span>
+        <span data-lang="zh">(a) 七种共享 Retail 配置的合并 oracle 成功率与错误放行率。(b) 在 oracle 无效与 oracle 正确两类回合内部的验证器结果：拒绝、错误放行、未宣称完成、接受。(c) 高风险层中各项添加相对 Minimal 的平均情景价值，随每次错误放行的责任损失变化，双对数坐标。</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <details class="bib">
+      <summary>BibTeX</summary>
+<pre>@article{zhang2026harness,
+  title   = {How Do Agent Harnesses Create Value? Planning Information
+             and Release Control in Stateful LLM Agents},
+  author  = {Zhang, Yukun and Xu, Kemu and Chen, Yishen},
+  year    = {2026},
+  note    = {Working paper}
+}</pre>
+    </details>
+  </section>
+
+  <div class="pagenav">
+    <a href="../index.html">&larr; <span data-lang="en">All papers</span><span data-lang="zh">返回论文列表</span></a>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap-wide">
+    <span>AI Agent Economics</span>
+    <span>
+      <span data-lang="en">Last updated September 2026</span>
+      <span data-lang="zh">最后更新于 2026 年 9 月</span>
+    </span>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js" defer></script>
+</body>
+</html>

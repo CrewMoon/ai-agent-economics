@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delegation Rights — AI Agent Economics</title>
+<meta name="description" content="Property, agency, and investment incentives in the age of AI agents: a three-player incomplete-contracts model of platform, user, and agent control.">
+<script>try{var l=localStorage.getItem('aae-lang');if(l==='zh'){document.documentElement.dataset.lang='zh';document.documentElement.lang='zh-Hans';}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="brand" href="../index.html">AI Agent Economics</a>
+    <button class="langtoggle" type="button">中文</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="article-header">
+    <p class="eyebrow">
+      <span data-lang="en">Paper 01 · Property rights</span>
+      <span data-lang="zh">论文 01 · 产权</span>
+    </p>
+    <h1>Delegation Rights: Property, Agency, and Investment Incentives in the Age of AI Agents</h1>
+    <p class="authors">Yukun Zhang <span data-lang="en">(The Chinese University of Hong Kong)</span><span data-lang="zh">（香港中文大学）</span></p>
+    <p class="venue">
+      <span data-lang="en">Working paper · This version: February 2026 · JEL D23, D86, K11, L12, L86, O34</span>
+      <span data-lang="zh">工作论文 · 本版本：2026 年 2 月 · JEL D23, D86, K11, L12, L86, O34</span>
+    </p>
+  </div>
+
+  <figure class="figure-hero">
+    <img src="../assets/img/p1/hero.png" alt="Theoretical framework linking delegation rights to incomplete contracts and three governance regimes">
+    <figcaption>
+      <b><span data-lang="en">Theoretical framework.</span><span data-lang="zh">理论框架。</span></b>
+      <span data-lang="en">Residual control over machine-mediated account use shapes outside options, bargaining payoffs, and ex ante investment. Platform control produces hold-up; user control leaves platform-side externalities. Certified delegation sits between them.</span>
+      <span data-lang="zh">机器代理操作账户的剩余控制权，决定了外部选项、谈判收益与事前投资。平台控制导致套牢，用户控制留下平台侧外部性，认证式委托居于两者之间。</span>
+    </figcaption>
+  </figure>
+
+  <section>
+    <h2><span data-lang="en">Abstract</span><span data-lang="zh">摘要</span></h2>
+    <div class="abstract">
+      <p data-lang="en">AI agents increasingly operate digital accounts on behalf of users, creating a new residual-control problem in digital platform governance: when a user authorizes a machine agent to exercise her platform-usage rights, should control over this delegation remain with the platform, be assigned unconditionally to the user, or be made conditional on verifiable safety standards? This paper introduces <em>delegation rights</em> as a distinct element of the digital property-rights bundle: the revocable, identity-preserving, scope-limited, and mode-specific right to authorize a machine agent to exercise account-level usage rights.</p>
+      <p data-lang="en">A three-player incomplete-contracts model with a User, an AI Agent provider, and a Platform shows that platform control can generate hold-up by weakening the User–Agent coalition's outside option and suppressing AI-complementary investment. Unconditional user control can restore investment incentives but may leave security, privacy, congestion, identity, and governance costs only partially internalized by the Agent. The welfare comparison therefore depends on a contribution-threshold logic. The paper then proposes <em>certified delegation</em>, under which the user's delegation right is protected only if the AI agent satisfies verifiable safety, authorization, auditability, and accountability standards. Counterfactual simulations based on Amazon–Perplexity and WeChat–Doubao show how certified delegation can reduce deadweight loss relative to polar regimes in e-commerce and closed social-ecosystem environments.</p>
+
+      <p data-lang="zh">AI 智能体正越来越多地代表用户操作数字账户，由此在平台治理中产生了一个新的剩余控制权问题：当用户授权机器代理行使自己的平台使用权时，这项委托的控制权应当留在平台手中、无条件归于用户，还是以可验证的安全标准为条件？本文将<em>委托权</em>提出为数字产权束中的一个独立要素：一项可撤销、保留身份、范围受限、方式特定的权利，用以授权机器代理行使账户层面的使用权。</p>
+      <p data-lang="zh">一个包含用户、AI 代理提供方与平台的三方不完全契约模型表明：平台控制会削弱「用户—代理」联盟的外部选项，从而造成套牢并压制与 AI 互补的投资；而无条件的用户控制虽能恢复投资激励，却可能使安全、隐私、拥塞、身份与治理成本只被代理方部分内部化。因此福利比较取决于一条贡献阈值逻辑。本文进而提出<em>认证式委托</em>：只有当 AI 代理满足可验证的安全、授权、可审计与问责标准时，用户的委托权才受保护。基于 Amazon–Perplexity 与微信–豆包的反事实模拟显示，在电商与封闭社交生态两类环境中，认证式委托都能相对于两个极端制度降低无谓损失。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span data-lang="en">Key findings</span><span data-lang="zh">核心发现</span></h2>
+    <ol class="findings">
+      <li>
+        <span data-lang="en">Delegation is not account transfer, data portability, or API access. It is a <strong>mode-of-use entitlement</strong> — whether a user may choose a machine agent as the means through which existing account rights are exercised — and it allocates residual control over a non-contractible decision.</span>
+        <span data-lang="zh">委托既不是账户转让，也不是数据可携或 API 接入，而是一项<strong>使用方式的权利</strong>：用户能否选择机器代理作为行使既有账户权利的途径。它配置的是一个不可缔约决策的剩余控制权。</span>
+      </li>
+      <li>
+        <span data-lang="en">Platform control weakens the User–Agent coalition's outside option. The resulting hold-up suppresses ex ante investment in AI-complementary workflows, preference specification, and supervision.</span>
+        <span data-lang="zh">平台控制削弱了「用户—代理」联盟的外部选项，由此产生的套牢压制了事前投资——包括 AI 互补工作流、偏好规格化与监督能力的投入。</span>
+      </li>
+      <li>
+        <span data-lang="en">Neither polar regime dominates. A <strong>contribution-threshold logic</strong> governs the comparison: delegation is more attractive when user and agent investments drive value creation; platform control is more attractive when infrastructure contribution and security risk are high.</span>
+        <span data-lang="zh">两个极端制度都不占优。比较由一条<strong>贡献阈值逻辑</strong>决定：当用户与代理的投资是价值创造的主力时，委托更可取；当基础设施贡献与安全风险更高时，平台控制更可取。</span>
+      </li>
+      <li>
+        <span data-lang="en">Certified delegation — protection conditional on verifiable safety, authorization, auditability, and accountability standards — reduces deadweight loss in both case counterfactuals. The numerical analysis uses a reduced-form agent investment combining productive adaptation and safety compliance, and is calibrated mechanism simulation rather than structural estimation.</span>
+        <span data-lang="zh">认证式委托——以可验证的安全、授权、可审计与问责标准为保护条件——在两个案例反事实中都降低了无谓损失。数值分析使用的是同时包含生产性适配与安全合规的简约式代理投资，属于校准的机制模拟，而非结构估计。</span>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2><span data-lang="en">Figures</span><span data-lang="zh">图表</span></h2>
+
+    <figure>
+      <img src="../assets/img/p1/fig1.png" alt="Policy-zone heatmap in alpha-A, alpha-P space with industry markers and a technology-drift arrow">
+      <figcaption>
+        <b><span data-lang="en">Experiment 2 — policy zones.</span><span data-lang="zh">实验 2 — 政策分区。</span></b>
+        <span data-lang="en">Optimal regime over the (α<sub>A</sub>, α<sub>P</sub>) contribution space. Red marks the zone where platform control is optimal, blue where user control is optimal, and the black line is the boundary. Industry markers and a technology-drift arrow are overlaid.</span>
+        <span data-lang="zh">在 (α<sub>A</sub>, α<sub>P</sub>) 贡献空间上的最优制度。红色为平台控制最优的区域，蓝色为用户控制最优的区域，黑线为分界。图中叠加了行业标记与技术漂移方向箭头。</span>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="../assets/img/p1/fig2.png" alt="Welfare as a function of the safety standard, with a shaded dominance interval">
+      <figcaption>
+        <b><span data-lang="en">Experiment 3 — welfare and the safety standard.</span><span data-lang="zh">实验 3 — 福利与安全标准。</span></b>
+        <span data-lang="en">Welfare under certified delegation as a function of the safety standard K̄ (green), against welfare under platform control, user control, and the first best (horizontal lines). The shaded region is the dominance interval where certification beats both polar regimes.</span>
+        <span data-lang="zh">认证式委托下的福利随安全标准 K̄ 的变化（绿线），与平台控制、用户控制及一阶最优（水平线）对照。阴影区为认证优于两个极端制度的支配区间。</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <details class="bib">
+      <summary>BibTeX</summary>
+<pre>@article{zhang2026delegation,
+  title   = {Delegation Rights: Property, Agency, and Investment
+             Incentives in the Age of AI Agents},
+  author  = {Zhang, Yukun},
+  year    = {2026},
+  note    = {Working paper}
+}</pre>
+    </details>
+  </section>
+
+  <div class="pagenav">
+    <a href="../index.html">&larr; <span data-lang="en">All papers</span><span data-lang="zh">返回论文列表</span></a>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap-wide">
+    <span>AI Agent Economics</span>
+    <span>
+      <span data-lang="en">Last updated September 2026</span>
+      <span data-lang="zh">最后更新于 2026 年 9 月</span>
+    </span>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js" defer></script>
+</body>
+</html>

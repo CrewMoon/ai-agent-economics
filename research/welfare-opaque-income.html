@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welfare-Opaque Income — AI Agent Economics</title>
+<meta name="description" content="Optimal income taxation when an AI agent implements choices through a rule hidden from the government, with a 4,500-run delegation laboratory across five engines.">
+<script>try{var l=localStorage.getItem('aae-lang');if(l==='zh'){document.documentElement.dataset.lang='zh';document.documentElement.lang='zh-Hans';}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="brand" href="../index.html">AI Agent Economics</a>
+    <button class="langtoggle" type="button">中文</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="article-header">
+    <p class="eyebrow">
+      <span data-lang="en">Paper 02 · Public finance</span>
+      <span data-lang="zh">论文 02 · 公共财政</span>
+    </p>
+    <h1>Welfare-Opaque Income: Taxation under AI-Agent Delegation</h1>
+    <p class="authors">Yukun Zhang · Kemu Xu · Yishen Chen</p>
+    <p class="venue">
+      <span data-lang="en">Working paper · Version: September 13, 2026</span>
+      <span data-lang="zh">工作论文 · 版本：2026 年 9 月 13 日</span>
+    </p>
+  </div>
+
+  <figure class="figure-hero">
+    <img src="../assets/img/p2/hero.png" alt="Three-panel schematic: double unobservability, same income with different utility gradients, and bounds on the welfare effect">
+    <figcaption>
+      <b><span data-lang="en">From hidden execution to augmented sufficient statistics.</span><span data-lang="zh">从隐藏执行到增广的充分统计量。</span></b>
+      <span data-lang="en">(A) Ability and true preferences both pass through a hidden execution rule before becoming taxable income. (B) The same executed income is consistent with overwork, underemployment, or faithful execution. (C) Bounds on the execution wedge deliver bounds on the welfare effect of a reform.</span>
+      <span data-lang="zh">(A) 能力与真实偏好都要先经过一条隐藏的执行规则，才变成应税收入。(B) 同一笔执行收入可以同时兼容过度劳动、劳动不足与忠实执行三种情形。(C) 对执行楔子的上下界，给出改革福利效应的上下界。</span>
+    </figcaption>
+  </figure>
+
+  <section>
+    <h2><span data-lang="en">Abstract</span><span data-lang="zh">摘要</span></h2>
+    <div class="abstract">
+      <p data-lang="en">We study income taxation when an AI agent implements economically relevant choices through a rule hidden from the government. Alongside unobserved productive ability, this hidden preference-to-execution mapping creates <em>double unobservability</em>: the same observable tax-base response can carry different welfare consequences. We call the resulting income <em>welfare-opaque</em>. Our constructions show that tax-base statistics can coincide while reform welfare effects differ, even when mechanical welfare weights are identical. We derive an optimal-tax condition that adds a response-weighted execution wedge to the familiar sufficient statistics. A higher marginal rate gains a corrective benefit under local over-execution and an additional cost under local under-execution. Observing the wedge identifies the welfare effect of a marginal reform at the prevailing schedule; bounds on it deliver bounds on that effect.</p>
+      <p data-lang="en">A controlled laboratory compares 4,500 model runs across five AI engines. Faithful delegation selects the score maximizer in essentially all runs. Conflicted objectives produce heterogeneous responses: Claude largely preserves the score maximizer, GLM moves predominantly downward, and GPT-mini and Qwen show concentrated lower-tail increases. Qwen also makes substantial downward adjustments. Different engines locate their departures at different points and in different directions of the designed distribution. Explicit scores align model rankings; formula-based objective instructions yield more uneven agreement. The analysis identifies execution information as a complement to conventional tax-base statistics.</p>
+
+      <p data-lang="zh">本文研究这样一种所得税问题：经济上相关的选择由 AI 代理按一条政府不可观测的规则执行。除了不可观测的生产能力之外，这条隐藏的「偏好—执行」映射还制造了<em>双重不可观测性</em>——同样一个可观测的税基反应，可以对应不同的福利后果。我们把由此产生的收入称为<em>福利不透明的</em>。我们的构造表明：即使机械福利权重完全相同，税基统计量可以重合而改革的福利效应却不同。由此我们推导出一个最优税条件，在熟悉的充分统计量之外增加一个按反应加权的执行楔子：在局部过度执行时，提高边际税率获得矫正性收益；在局部执行不足时，则承担额外成本。观测到该楔子即可识别现行税制下边际改革的福利效应；对它的上下界则给出该效应的上下界。</p>
+      <p data-lang="zh">受控实验室比较了横跨五个 AI 引擎的 4,500 次模型运行。在忠实委托下，几乎所有运行都选中了分数最大化点。目标冲突则产生异质反应：Claude 大体保持分数最大化点，GLM 以向下调整为主，GPT-mini 与 Qwen 呈现集中于低分位的上调，Qwen 同时也有明显的向下调整。不同引擎在设计分布的不同位置、以不同方向偏离。明确给出分数能让模型排序趋于一致，而基于公式的目标指令则带来更不均匀的一致性。分析表明，执行信息是传统税基统计量的补充而非替代。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span data-lang="en">Key findings</span><span data-lang="zh">核心发现</span></h2>
+    <ol class="findings">
+      <li>
+        <span data-lang="en"><strong>Double unobservability.</strong> Hidden ability was always part of the Mirrlees problem; a hidden execution rule is new. Together they let two economies share every tax-base statistic — including mechanical welfare weights — while a marginal reform raises welfare in one and lowers it in the other.</span>
+        <span data-lang="zh"><strong>双重不可观测性。</strong>能力不可观测本就是 Mirrlees 问题的一部分，执行规则不可观测则是新增的。二者叠加之后，两个经济体可以在每一个税基统计量上完全一致——包括机械福利权重——而同一个边际改革却在一个中提高福利、在另一个中降低福利。</span>
+      </li>
+      <li>
+        <span data-lang="en"><strong>An execution wedge enters the optimal-tax formula.</strong> The familiar sufficient statistics acquire a response-weighted wedge term. Under local over-execution a higher marginal rate earns a corrective benefit; under local under-execution it carries an additional cost.</span>
+        <span data-lang="zh"><strong>最优税公式中出现执行楔子。</strong>熟悉的充分统计量需补上一个按反应加权的楔子项。局部过度执行时，提高边际税率获得矫正性收益；局部执行不足时，则要承担额外成本。</span>
+      </li>
+      <li>
+        <span data-lang="en"><strong>Partial identification works.</strong> Observing the wedge identifies the welfare effect of a marginal reform at the prevailing schedule; bounding it bounds that effect — so the empirical demand is for execution information, not for full preference recovery.</span>
+        <span data-lang="zh"><strong>部分识别是可行的。</strong>观测到楔子即可识别现行税制下边际改革的福利效应；给它定界就给该效应定界。因此实证上需要的是执行信息，而不是完整还原偏好。</span>
+      </li>
+      <li>
+        <span data-lang="en"><strong>Engines depart differently, not uniformly.</strong> Under faithful delegation all five engines select the score maximizer in essentially all runs. Under conflicted objectives they diverge in both location and direction, so no single engine's behavior can stand in for "the agent" in a policy calibration.</span>
+        <span data-lang="zh"><strong>不同引擎的偏离方式并不一致。</strong>忠实委托下，五个引擎几乎在所有运行中都选中分数最大化点；目标冲突下，它们在偏离位置与方向上都出现分化。因此在政策校准中，不能用任何单一引擎的行为代表「智能体」。</span>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2><span data-lang="en">Figures</span><span data-lang="zh">图表</span></h2>
+
+    <figure>
+      <img src="../assets/img/p2/fig1.png" alt="Shares of runs below and above the deterministic score maximizer by engine, and mean score loss">
+      <figcaption>
+        <b><span data-lang="en">Execution direction and score loss under conflicted objectives.</span><span data-lang="zh">目标冲突下的执行方向与分数损失。</span></b>
+        <span data-lang="en">Each engine contributes 720 runs with equal Mild and Aggressive weights. Panel A gives the shares below and above the deterministic score maximizer, with the grey column their sum; the remaining share selects the maximizer. Panel B reports mean loss under the weekly score.</span>
+        <span data-lang="zh">每个引擎贡献 720 次运行，温和与激进权重相等。A 图给出低于与高于确定性分数最大化点的比例，灰色列为两者之和，其余比例即选中最大化点。B 图报告周度分数下的平均损失。</span>
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="../assets/img/p2/fig2.png" alt="Rank correlation of each response with the specified ordering, by engine, with means">
+      <figcaption>
+        <b><span data-lang="en">Ranking consistency across engines.</span><span data-lang="zh">引擎间的排序一致性。</span></b>
+        <span data-lang="en">18 score and 18 primitives responses per engine at requested temperature zero, each ranking a profile-specific subset of offered hours. Dots are each response's rank correlation with the specified ordering; bars and the values above give engine means, and the dashed line marks perfect agreement.</span>
+        <span data-lang="zh">每个引擎在请求温度为零下有 18 次分数型与 18 次原语型响应，每次排序针对该画像特定的工时子集。点为单次响应与指定排序的秩相关，柱与上方数值为引擎均值，虚线表示完全一致。</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <details class="bib">
+      <summary>BibTeX</summary>
+<pre>@article{zhang2026welfareopaque,
+  title   = {Welfare-Opaque Income: Taxation under AI-Agent Delegation},
+  author  = {Zhang, Yukun and Xu, Kemu and Chen, Yishen},
+  year    = {2026},
+  note    = {Working paper}
+}</pre>
+    </details>
+  </section>
+
+  <div class="pagenav">
+    <a href="../index.html">&larr; <span data-lang="en">All papers</span><span data-lang="zh">返回论文列表</span></a>
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap-wide">
+    <span>AI Agent Economics</span>
+    <span>
+      <span data-lang="en">Last updated September 2026</span>
+      <span data-lang="zh">最后更新于 2026 年 9 月</span>
+    </span>
+  </div>
+</footer>
+
+<script src="../assets/js/i18n.js" defer></script>
+</body>
+</html>
