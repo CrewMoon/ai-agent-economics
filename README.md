@@ -1,6 +1,6 @@
 # AI Agent Economics
 
-Research on property rights, taxation, and production when AI agents make economic decisions on behalf of people.
+Four papers on AI-agent delegation rights, the organization of production, execution control, and public policy.
 
 **→ [crewmoon.github.io/ai-agent-economics](https://crewmoon.github.io/ai-agent-economics/)**
 
@@ -8,10 +8,10 @@ Research on property rights, taxation, and production when AI agents make econom
 
 | Paper | Authors | Takeaway | Links |
 | --- | --- | --- | --- |
-| [Delegation Rights: Property, Agency, and Investment Incentives in the Age of AI Agents](https://crewmoon.github.io/ai-agent-economics/research/delegation-rights.html) | Yukun Zhang | Platform control over machine-mediated account use creates hold-up; certified delegation dominates both polar regimes. | — |
-| [Welfare-Opaque Income: Taxation under AI-Agent Delegation](https://crewmoon.github.io/ai-agent-economics/research/welfare-opaque-income.html) | Zhang, Xu, Chen | A hidden execution rule means identical tax-base statistics can carry opposite welfare consequences. Optimal tax needs an execution wedge. | [arXiv](https://arxiv.org/abs/2609.20425) · [HF](https://huggingface.co/papers/2609.20425) |
-| [The Organization of Inference: Information, Resource Constraints, and AI Production](https://crewmoon.github.io/ai-agent-economics/research/organization-of-inference.html) | Zhang, Xu, Chen | Scale sets the capacity a system has; workflow and information structure decide how much becomes output. | [arXiv](https://arxiv.org/abs/2609.20449) · [HF](https://huggingface.co/papers/2609.20449) |
-| [How Do Agent Harnesses Create Value?](https://crewmoon.github.io/ai-agent-economics/research/agent-harnesses.html) | Zhang, Xu, Chen | Planning guidance and release control are separable, and their ranking depends entirely on the liability assigned to a wrong acceptance. | [arXiv](https://arxiv.org/abs/2609.20474) · [HF](https://huggingface.co/papers/2609.20474) |
+| [Delegation Rights: Property, Agency, and Investment Incentives in the Age of AI Agents](https://crewmoon.github.io/ai-agent-economics/research/delegation-rights.html) | Yukun Zhang, Kemu Xu | Platform discretion over machine-mediated account use discourages investment; certified delegation conditions access on verifiable authorization and risk controls. | [arXiv](https://arxiv.org/abs/2606.31935) · [HF](https://huggingface.co/papers/2606.31935) |
+| [The Organization of Inference: Information, Resource Constraints, and AI Production](https://crewmoon.github.io/ai-agent-economics/research/organization-of-inference.html) | Zhang, Xu, Chen | More inference capacity helps only some workflows: what matters is which stage receives task information and how much resource is left for execution. | [arXiv](https://arxiv.org/abs/2609.20449) · [HF](https://huggingface.co/papers/2609.20449) |
+| [How Do Agent Harnesses Create Value?](https://crewmoon.github.io/ai-agent-economics/research/agent-harnesses.html) | Zhang, Xu, Chen | Planning guidance and release control are separable, and their ranking depends entirely on the loss assigned to a false acceptance. | [arXiv](https://arxiv.org/abs/2609.20474) · [HF](https://huggingface.co/papers/2609.20474) |
+| [Welfare-Opaque Income: Taxation under AI-Agent Delegation](https://crewmoon.github.io/ai-agent-economics/research/welfare-opaque-income.html) | Zhang, Xu, Chen | A hidden execution rule means identical tax-base statistics can carry different welfare consequences. Optimal tax needs an execution wedge. | [arXiv](https://arxiv.org/abs/2609.20425) · [HF](https://huggingface.co/papers/2609.20425) |
 
 ## People
 

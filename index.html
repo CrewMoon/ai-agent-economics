@@ -3,143 +3,183 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Agent Economics</title>
-<meta name="description" content="Research on property rights, taxation, and production when AI agents make economic decisions on behalf of people.">
+<title>AI Agent Economics: From Delegation Rights to Social Welfare</title>
+<meta name="description" content="Four papers on AI-agent delegation rights, the organization of production, execution control, and public policy.">
 <link rel="canonical" href="https://crewmoon.github.io/ai-agent-economics/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AI Agent Economics">
-<meta property="og:title" content="AI Agent Economics">
-<meta property="og:description" content="Research on property rights, taxation, and production when AI agents make economic decisions on behalf of people.">
+<meta property="og:title" content="AI Agent Economics: From Delegation Rights to Social Welfare">
+<meta property="og:description" content="Four papers on AI-agent delegation rights, the organization of production, execution control, and public policy.">
 <meta property="og:image" content="https://crewmoon.github.io/ai-agent-economics/assets/og/home.png">
 <meta property="og:url" content="https://crewmoon.github.io/ai-agent-economics/">
 <meta name="twitter:card" content="summary_large_image">
 <script>try{var l=localStorage.getItem('aae-lang');if(l==='zh'){document.documentElement.dataset.lang='zh';document.documentElement.lang='zh-Hans';}}catch(e){}</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%2317283b'/%3E%3Cpath%20d='M17%2044V19h13l17%2025V19'%20fill='none'%20stroke='%23e6c181'%20stroke-width='5'%20stroke-linecap='square'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 
+<a class="skip" href="#main"><span data-lang="en">Skip to content</span><span data-lang="zh">跳转到正文</span></a>
+
 <header class="masthead">
-  <div class="masthead-inner">
-    <a class="brand" href="index.html">AI Agent Economics</a>
-    <button class="langtoggle" type="button">中文</button>
+  <div class="shell masthead-inner">
+    <a class="brand" href="#top" aria-label="AI Agent Economics">AI Agent Economics</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#question"><span data-lang="en">Research question</span><span data-lang="zh">研究问题</span></a>
+      <a href="#papers"><span data-lang="en">Papers</span><span data-lang="zh">系列论文</span></a>
+      <a href="#team"><span data-lang="en">Authors</span><span data-lang="zh">作者</span></a>
+      <div class="language" role="group" aria-label="Language / 语言">
+        <button class="langtoggle" type="button"></button>
+      </div>
+    </nav>
   </div>
 </header>
 
-<main class="wrap-wide">
+<main id="main">
 
-  <div class="hero">
-    <p class="eyebrow">
-      <span data-lang="en">Working Group</span>
-      <span data-lang="zh">研究组</span>
-    </p>
-    <h1>
-      <span data-lang="en">The economics of AI-agent delegation</span>
-      <span data-lang="zh">AI 智能体委托的经济学</span>
-    </h1>
-    <p class="standfirst">
-      <span data-lang="en">When a machine agent executes the choice, who holds the right to delegate, what does the resulting income tell a government, and how should the work inside the agent be organized?</span>
-      <span data-lang="zh">当决策由机器代理执行：委托权归谁，由此产生的收入还能告诉政府什么，代理内部的工作又该如何组织？</span>
-    </p>
-  </div>
+  <section class="hero" id="top" aria-labelledby="page-title">
+    <div class="shell hero-content">
+      <p class="eyebrow">
+        <span data-lang="en">Research series · Four working papers</span>
+        <span data-lang="zh">研究专题 · 四篇工作论文</span>
+      </p>
+      <h1 id="page-title">
+        <span data-lang="en">AI Agent Economics: From Delegation Rights to Social Welfare</span>
+        <span data-lang="zh">AI Agent 经济学：从委托权到社会福利</span>
+      </h1>
+      <p class="lead">
+        <span data-lang="en">As AI agents move beyond advice to use accounts, invoke tools, and complete tasks on behalf of people, economics must revisit several basic questions: who may authorize them to act? How should information and computational resources be organized? Who detects erroneous outcomes and bears their cost? And when execution is hidden, how can we measure its effects on human welfare?</span>
+        <span data-lang="zh">当 AI agent 不再只是提供建议，而是开始代表人使用账户、调用工具并完成任务，经济学需要重新回答几个基本问题：谁有权授权它行动？信息和计算资源应如何组织？错误结果由谁发现并承担代价？当执行过程不可见时，我们又该如何衡量它对人的福利产生了什么影响？</span>
+      </p>
+      <a class="hero-action" href="#papers">
+        <span data-lang="en">Explore the papers</span><span data-lang="zh">阅读系列论文</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
 
-  <section class="agenda">
-    <div style="max-width:780px">
-      <h2>
-        <span data-lang="en">Research agenda</span>
-        <span data-lang="zh">研究议程</span>
+  <section class="intro shell railed" id="question" aria-labelledby="question-title">
+    <div class="section-kicker">
+      <span class="n">01</span>
+      <span data-lang="en">The question</span><span data-lang="zh">研究问题</span>
+    </div>
+    <div class="intro-body">
+      <h2 id="question-title">
+        <span data-lang="en">Series overview</span>
+        <span data-lang="zh">系列概览</span>
       </h2>
-      <p data-lang="en">AI agents increasingly act inside accounts, workflows, and labor decisions that used to be operated by people. Each of these substitutions breaks an assumption that standard economic tools quietly rely on: that the person choosing is the person whose welfare is at stake, and that an observed outcome carries a readable preference behind it.</p>
-      <p data-lang="zh">AI 智能体正在接管过去由人操作的账户、工作流与劳动决策。每一次这样的替代，都会打破标准经济学工具默认的一个前提：做选择的人就是福利承担者，可观测的结果背后有一个可读的偏好。</p>
 
-      <p data-lang="en">Our four papers follow that break through four layers. <strong>Delegation Rights</strong> asks who should hold residual control over machine-mediated account use, and shows that platform control can suppress AI-complementary investment through hold-up. <strong>Welfare-Opaque Income</strong> takes delegation as given and asks what the tax base still reveals: when the execution rule is hidden, identical tax-base statistics can carry opposite welfare consequences, and the optimal-tax formula needs an extra execution wedge.</p>
-      <p data-lang="zh">四份工作沿着这个断裂分四层推进。<strong>Delegation Rights</strong> 问的是：机器代理操作账户的剩余控制权该归谁；平台控制会通过套牢压制与 AI 互补的投资。<strong>Welfare-Opaque Income</strong> 接受委托这一既成事实，转而追问税基还能揭示什么：当执行规则不可观测，完全相同的税基统计量可以对应相反的福利含义，最优税公式因此需要补上一个执行楔子。</p>
+      <p data-lang="en">This series studies these questions through four connected areas: <strong>delegation rights, the organization of production, execution control, and public policy</strong>. <a href="research/delegation-rights.html">Delegation Rights</a> examines control among users, agent providers, and platforms; <a href="research/organization-of-inference.html">The Organization of Inference</a> studies how task information and inference budgets shape production; <a href="research/agent-harnesses.html">How Do Agent Harnesses Create Value?</a> examines how planning and verification affect success, false passes, and cost; and <a href="research/welfare-opaque-income.html">Welfare-Opaque Income</a> asks how tax policy can assess welfare when the agent's execution rule is hidden from the government.</p>
+      <p data-lang="en">Using different theoretical and experimental methods, the four papers advance a shared research agenda: <strong>to understand how AI agents change rights to act, value creation, and the measurement of outcomes—and to design institutions that are more effective and accountable.</strong></p>
 
-      <p data-lang="en">The other two open the agent itself. <strong>The Organization of Inference</strong> runs matched workflow experiments on externally verified software tasks and shows that the return to a larger inference budget depends on how the workflow is organized and what information reaches the planner. <strong>How Do Agent Harnesses Create Value?</strong> separates the harness into guidance and release control, and prices each against the liability assigned to a wrong acceptance.</p>
-      <p data-lang="zh">另外两篇打开代理本身。<strong>The Organization of Inference</strong> 在外部可验证的软件任务上做配对工作流实验，证明更大的推理预算能换来多少产出，取决于工作流怎么组织、以及规划者拿到了什么信息。<strong>How Do Agent Harnesses Create Value?</strong> 把 harness 拆成「指导」与「放行控制」两部分，并按错误放行所承担的责任对两者分别定价。</p>
-
-      <p data-lang="en">The first two papers are mechanism and policy; the last two are controlled experimental evidence. Read together, they argue that agent-mediated economies need identification strategies, not just faster models.</p>
-      <p data-lang="zh">前两篇是机制与政策，后两篇是受控实验证据。合起来的主张是：智能体中介的经济需要的是识别策略，而不只是更快的模型。</p>
+      <p data-lang="zh">这一论文系列从<strong>委托权、生产组织、执行控制和公共政策</strong>四个层面研究这些问题。<a href="research/delegation-rights.html">《Delegation Rights》</a>分析用户、agent 提供者与平台之间的控制权；<a href="research/organization-of-inference.html">《The Organization of Inference》</a>研究任务信息与推理预算如何影响生产结果；<a href="research/agent-harnesses.html">《How Do Agent Harnesses Create Value?》</a>考察规划和验证如何改变成功率、错误放行与成本；<a href="research/welfare-opaque-income.html">《Welfare-Opaque Income》</a>进一步讨论，当 agent 的执行规则无法被政府观察时，税收政策如何判断真实的福利效果。</p>
+      <p data-lang="zh">四篇论文采用不同的理论与实验方法，共同指向一个研究议程：<strong>理解 AI agent 如何改变经济活动中的行动权、价值创造和结果衡量，并据此设计更有效、更可问责的制度。</strong></p>
     </div>
   </section>
 
-  <section>
-    <h2>
-      <span data-lang="en">Papers</span>
-      <span data-lang="zh">论文</span>
-    </h2>
-
-    <div class="cards">
-
-      <article class="card">
-        <div class="card-meta"><span data-lang="en">Working paper · February 2026</span><span data-lang="zh">工作论文 · 2026 年 2 月</span></div>
-        <h3><a href="research/delegation-rights.html">Delegation Rights: Property, Agency, and Investment Incentives in the Age of AI Agents</a></h3>
-        <p class="authors">Yukun Zhang</p>
-        <p class="takeaway">
-          <span data-lang="en">Delegation is a distinct property right. Platform control creates hold-up and underinvestment; unconditional user control leaves security costs uninternalized. Certified delegation dominates both polar regimes.</span>
-          <span data-lang="zh">委托是一项独立的产权。平台控制导致套牢与投资不足；无条件的用户控制则让安全成本无人内部化。认证式委托优于这两个极端。</span>
+  <section class="papers shell" id="papers" aria-labelledby="papers-title">
+    <div class="section-head railed">
+      <div class="section-kicker">
+        <span class="n">02</span>
+        <span data-lang="en">The papers</span><span data-lang="zh">系列论文</span>
+      </div>
+      <div>
+        <h2 id="papers-title">
+          <span data-lang="en">Four questions, one research agenda.</span>
+          <span data-lang="zh">四个问题，一条研究主线。</span>
+        </h2>
+        <p>
+          <span data-lang="en">The papers are ordered by their conceptual relationship. They use different theoretical or experimental methods, each with its own scope.</span>
+          <span data-lang="zh">以下按照概念逻辑排列。各篇采用不同的理论或实验方法，结论有各自的适用范围。</span>
         </p>
-        <div class="stat">
-          <div class="stat-value">2 <span data-lang="en">platform cases</span><span data-lang="zh">个平台案例</span></div>
-          <div class="stat-label">
-            <span data-lang="en">Amazon–Perplexity and WeChat–Doubao counterfactuals under certified delegation</span>
-            <span data-lang="zh">Amazon–Perplexity 与微信–豆包的认证式委托反事实模拟</span>
+      </div>
+    </div>
+
+    <div class="paper-list">
+
+      <article class="paper railed">
+        <div class="paper-index">
+          <span class="num">01</span>
+          <span class="theme"><span data-lang="en">Delegation rights</span><span data-lang="zh">委托权</span></span>
+        </div>
+        <div>
+          <h3><a href="research/delegation-rights.html">Delegation Rights: Property, Agency, and Investment Incentives in the Age of AI Agents</a></h3>
+          <p class="authors">Yukun Zhang · Kemu Xu · arXiv:2606.31935 [econ.EM]</p>
+          <span class="abstract-label"><span data-lang="en">Abstract · adapted</span><span data-lang="zh">摘要 · 据原文整理</span></span>
+          <p class="summary">
+            <span data-lang="en">AI agents can act through privileges already held by account users, raising a question about who controls the mode of execution. The paper defines delegation rights as revocable, scope-limited, identity-preserving, and mode-specific authorization. In a three-party incomplete-contracts model of the user, agent provider, and platform, platform discretion can discourage relationship-specific investment, while unrestricted user control can leave security, privacy, and third-party harms insufficiently addressed. The proposed certified-delegation regime protects access subject to verifiable authorization, auditability, and risk controls. Illustrative mechanism simulations suggest that this conditional allocation of control can improve delegation incentives while limiting residual risk.</span>
+            <span data-lang="zh">AI agent 可以借助用户已有的账户权限执行任务，由此产生一个新的控制权问题：用户能否授权自动代理以特定方式行使既有权利？论文将委托权界定为可撤销、限定范围、保留用户身份且区分执行方式的授权，并建立用户、agent 提供者与平台的三方不完全契约模型。平台自由否决可能削弱双方的投资激励，用户自由委托则可能留下安全、隐私和第三方风险。论文提出以可核验授权、审计和风险控制为条件的认证委托；示意性机制模拟表明，这种安排有可能在恢复委托激励的同时约束剩余风险。</span>
+          </p>
+          <div class="paper-links">
+            <a class="paper-link" href="research/delegation-rights.html"><span data-lang="en">Details, figures and BibTeX</span><span data-lang="zh">详情、配图与 BibTeX</span></a>
+            <a class="paper-link" href="https://arxiv.org/abs/2606.31935" target="_blank" rel="noopener noreferrer">arXiv ↗</a>
+            <a class="paper-link" href="https://huggingface.co/papers/2606.31935" target="_blank" rel="noopener noreferrer">Hugging Face ↗</a>
           </div>
         </div>
       </article>
 
-      <article class="card">
-        <div class="card-meta"><span data-lang="en">arXiv:2609.20425 · cs.CY · September 2026</span><span data-lang="zh">arXiv:2609.20425 · cs.CY · 2026 年 9 月</span></div>
-        <h3><a href="research/welfare-opaque-income.html">Welfare-Opaque Income: Taxation under AI-Agent Delegation</a></h3>
-        <p class="authors">Yukun Zhang · Kemu Xu · Yishen Chen</p>
-        <p class="takeaway">
-          <span data-lang="en">A hidden preference-to-execution mapping makes income welfare-opaque: the same tax-base response can carry different welfare consequences. Optimal tax needs a response-weighted execution wedge.</span>
-          <span data-lang="zh">隐藏的「偏好—执行」映射让收入变得福利不透明：相同的税基反应可以对应不同的福利后果。最优税需要补上一个按反应加权的执行楔子。</span>
-        </p>
-        <p class="links"><a href="https://arxiv.org/abs/2609.20425" rel="noopener">arXiv</a><span class="sep">·</span><a href="https://huggingface.co/papers/2609.20425" rel="noopener">Hugging Face</a></p>
-        <div class="stat">
-          <div class="stat-value">4,500 <span data-lang="en">runs</span><span data-lang="zh">次运行</span></div>
-          <div class="stat-label">
-            <span data-lang="en">model runs across five AI engines in a controlled delegation laboratory</span>
-            <span data-lang="zh">受控委托实验室中横跨五个 AI 引擎的模型运行</span>
+      <article class="paper railed">
+        <div class="paper-index">
+          <span class="num">02</span>
+          <span class="theme"><span data-lang="en">Production</span><span data-lang="zh">生产组织</span></span>
+        </div>
+        <div>
+          <h3><a href="research/organization-of-inference.html">The Organization of Inference: Information, Resource Constraints, and AI Production</a></h3>
+          <p class="authors">Yukun Zhang · Kemu Xu · Yishen Chen · arXiv:2609.20449 [cs.AI]</p>
+          <span class="abstract-label"><span data-lang="en">Abstract · adapted</span><span data-lang="zh">摘要 · 据原文整理</span></span>
+          <p class="summary">
+            <span data-lang="en">The productive value of inference depends on where task information and computational capacity are placed within a workflow. In externally verified software-engineering tasks, direct execution succeeds in 59.6% of assignments at both 12,000- and 24,000-token ceilings, while information-constrained planning rises from 36.2% to 51.2%. A separate strict read-only experiment changes whether the planner sees the task issue: access adds about 16 percentage points at the lower ceiling, and task-informed planning exceeds direct execution by 29.6 points at the higher ceiling. These comparisons show that more capacity has different effects across workflows, depending on which stage receives information and how much resource remains for execution.</span>
+            <span data-lang="zh">推理能力的经济价值取决于任务信息和计算预算如何在规划与执行之间分配。论文在经过外部验证的软件工程任务上比较不同工作流：逻辑 token 上限从 12,000 增至 24,000 时，直接执行的成功率均为 59.6%，信息受限规划的成功率则从 36.2% 升至 51.2%。在另一个严格的只读规划实验中，让规划者看到具体问题，在 12,000 token 条件下将成功率提高约 16 个百分点；在 24,000 token 条件下，任务知情规划比直接执行高 29.6 个百分点。结果说明，扩大预算是否有用，取决于信息能否到达需要它的阶段，以及执行阶段是否仍有足够资源。</span>
+          </p>
+          <div class="paper-links">
+            <a class="paper-link" href="research/organization-of-inference.html"><span data-lang="en">Details, figures and BibTeX</span><span data-lang="zh">详情、配图与 BibTeX</span></a>
+            <a class="paper-link" href="https://arxiv.org/abs/2609.20449" target="_blank" rel="noopener noreferrer">arXiv ↗</a>
+            <a class="paper-link" href="https://huggingface.co/papers/2609.20449" target="_blank" rel="noopener noreferrer">Hugging Face ↗</a>
           </div>
         </div>
       </article>
 
-      <article class="card">
-        <div class="card-meta"><span data-lang="en">arXiv:2609.20449 · cs.AI · September 2026</span><span data-lang="zh">arXiv:2609.20449 · cs.AI · 2026 年 9 月</span></div>
-        <h3><a href="research/organization-of-inference.html">The Organization of Inference: Information, Resource Constraints, and AI Production</a></h3>
-        <p class="authors">Yukun Zhang · Kemu Xu · Yishen Chen</p>
-        <p class="takeaway">
-          <span data-lang="en">Scale sets the capacity a system has; workflow and information structure decide how much of it becomes output. Planning pays only when the planner can see the task.</span>
-          <span data-lang="zh">规模决定系统拿到多少算力，工作流与信息结构决定其中多少变成产出。只有当规划者看得见任务本身，规划才有回报。</span>
-        </p>
-        <p class="links"><a href="https://arxiv.org/abs/2609.20449" rel="noopener">arXiv</a><span class="sep">·</span><a href="https://huggingface.co/papers/2609.20449" rel="noopener">Hugging Face</a></p>
-        <div class="stat">
-          <div class="stat-value">+15.0 pp</div>
-          <div class="stat-label">
-            <span data-lang="en">narrowing of the planning disadvantage when the token ceiling doubles (95% CI 4.2–25.8)</span>
-            <span data-lang="zh">token 上限翻倍时，规划劣势收窄的幅度（95% 置信区间 4.2–25.8）</span>
+      <article class="paper railed">
+        <div class="paper-index">
+          <span class="num">03</span>
+          <span class="theme"><span data-lang="en">Execution control</span><span data-lang="zh">执行控制</span></span>
+        </div>
+        <div>
+          <h3><a href="research/agent-harnesses.html">How Do Agent Harnesses Create Value? Planning Information and Release Control in Stateful LLM Agents</a></h3>
+          <p class="authors">Yukun Zhang · Kemu Xu · Yishen Chen · arXiv:2609.20474 [cs.AI]</p>
+          <span class="abstract-label"><span data-lang="en">Abstract · adapted</span><span data-lang="zh">摘要 · 据原文整理</span></span>
+          <p class="summary">
+            <span data-lang="en">Agent harnesses provide planning guidance and decide whether attempted completions should be accepted. The paper studies their effect on success, false passes, and cost in two Retail experiments and an Airline pilot from τ²-bench. Across 265 matched cells, prewritten task-specific guidance raises oracle-verified success by 7.17 percentage points relative to a word-count-matched shuffled control, with larger gains on more complex tasks. A read-only terminal verifier rejects 61% of invalid Retail episodes but also withholds 17% of correct ones. The preferred component depends on the loss assigned to false acceptance; when that loss is high, standalone verification can capture much of the risk benefit at lower cost.</span>
+            <span data-lang="zh">agent harness 通过提供规划指引和检查完成状态影响任务表现。论文使用 τ²-bench 的两组 Retail 实验与一组 Airline 先导实验，分别考察规划内容、终端验证、成功率及成本。在 265 个匹配单元中，预写的任务专属规划比等字数的乱序文本对照使 oracle 验证成功率提高 7.17 个百分点，收益主要出现在更复杂的任务。只读终端验证器拒绝了 61% 的 Retail 无效任务，也误拒了 17% 的正确任务。规划与验证的经济价值取决于错误放行的损失：损失较高时，单独部署验证器可能以更低成本取得大部分风险控制收益。</span>
+          </p>
+          <div class="paper-links">
+            <a class="paper-link" href="research/agent-harnesses.html"><span data-lang="en">Details, figures and BibTeX</span><span data-lang="zh">详情、配图与 BibTeX</span></a>
+            <a class="paper-link" href="https://arxiv.org/abs/2609.20474" target="_blank" rel="noopener noreferrer">arXiv ↗</a>
+            <a class="paper-link" href="https://huggingface.co/papers/2609.20474" target="_blank" rel="noopener noreferrer">Hugging Face ↗</a>
           </div>
         </div>
       </article>
 
-      <article class="card">
-        <div class="card-meta"><span data-lang="en">arXiv:2609.20474 · cs.AI · September 2026</span><span data-lang="zh">arXiv:2609.20474 · cs.AI · 2026 年 9 月</span></div>
-        <h3><a href="research/agent-harnesses.html">How Do Agent Harnesses Create Value? Planning Information and Release Control in Stateful LLM Agents</a></h3>
-        <p class="authors">Yukun Zhang · Kemu Xu · Yishen Chen</p>
-        <p class="takeaway">
-          <span data-lang="en">Guidance content and release control are separable components with separable prices. Which one matters depends entirely on the loss assigned to an erroneous acceptance.</span>
-          <span data-lang="zh">「指导内容」与「放行控制」是可分离的组件，价格也可分离。哪一个更重要，完全取决于错误放行所对应的损失。</span>
-        </p>
-        <p class="links"><a href="https://arxiv.org/abs/2609.20474" rel="noopener">arXiv</a><span class="sep">·</span><a href="https://huggingface.co/papers/2609.20474" rel="noopener">Hugging Face</a></p>
-        <div class="stat">
-          <div class="stat-value">+7.17 pp</div>
-          <div class="stat-label">
-            <span data-lang="en">success gain from task-specific plans over word-matched sham text, across 265 matched cells</span>
-            <span data-lang="zh">任务专属方案相对字数配平的伪文本带来的成功率提升，共 265 个配对格</span>
+      <article class="paper railed">
+        <div class="paper-index">
+          <span class="num">04</span>
+          <span class="theme"><span data-lang="en">Welfare</span><span data-lang="zh">福利衡量</span></span>
+        </div>
+        <div>
+          <h3><a href="research/welfare-opaque-income.html">Welfare-Opaque Income: Taxation under AI-Agent Delegation</a></h3>
+          <p class="authors">Yukun Zhang · Kemu Xu · Yishen Chen · arXiv:2609.20425 [cs.CY]</p>
+          <span class="abstract-label"><span data-lang="en">Abstract · adapted</span><span data-lang="zh">摘要 · 据原文整理</span></span>
+          <p class="summary">
+            <span data-lang="en">When an AI agent implements economic choices through a rule the government cannot observe, the mapping from a person's preferences to execution becomes hidden alongside productive ability. The paper shows that identical observed tax-base responses can correspond to different welfare effects and derives an optimal-tax condition with an execution wedge: over- and under-execution change the local value of a marginal tax reform in different directions. In 4,500 controlled runs across five AI engines, faithful delegation almost always selects the score-maximizing option, while conflicting objectives produce different patterns of departure across engines. The laboratory motivates collecting execution information alongside tax-base statistics; it does not estimate real-world tax effects.</span>
+            <span data-lang="zh">当 AI agent 按政府无法观察的规则替人作出经济选择时，除生产能力之外，偏好如何变成执行结果也成为隐藏变量。论文指出，即使可观察的税基反应和机械福利权重相同，税收改革的福利后果仍可能不同，并推导将执行偏差纳入其中的最优税条件：过度执行与不足执行会使提高边际税率产生方向不同的额外效应。论文还在五种 AI 引擎上进行 4,500 次受控模型运行。忠实委托几乎总能选中评分最优项，但目标冲突时，不同引擎偏离的方向与位置并不一致。结果提示，税基统计之外还需要理解代理执行规则；实验不直接估计现实经济中的税收效应。</span>
+          </p>
+          <div class="paper-links">
+            <a class="paper-link" href="research/welfare-opaque-income.html"><span data-lang="en">Details, figures and BibTeX</span><span data-lang="zh">详情、配图与 BibTeX</span></a>
+            <a class="paper-link" href="https://arxiv.org/abs/2609.20425" target="_blank" rel="noopener noreferrer">arXiv ↗</a>
+            <a class="paper-link" href="https://huggingface.co/papers/2609.20425" target="_blank" rel="noopener noreferrer">Hugging Face ↗</a>
           </div>
         </div>
       </article>
@@ -147,76 +187,89 @@
     </div>
   </section>
 
-  <section>
-    <h2>
-      <span data-lang="en">News</span>
-      <span data-lang="zh">动态</span>
-    </h2>
-    <ul class="news">
-      <li>
-        <div class="date">
-          <span data-lang="en">Sep 17, 2026</span>
-          <span data-lang="zh">2026 年 9 月 17 日</span>
-        </div>
-        <div class="entry">
-          <span data-lang="en">Three papers posted to arXiv: <a href="research/welfare-opaque-income.html">Welfare-Opaque Income</a> (2609.20425), <a href="research/organization-of-inference.html">The Organization of Inference</a> (2609.20449), and <a href="research/agent-harnesses.html">How Do Agent Harnesses Create Value?</a> (2609.20474).</span>
-          <span data-lang="zh">三篇论文上线 arXiv：<a href="research/welfare-opaque-income.html">Welfare-Opaque Income</a>（2609.20425）、<a href="research/organization-of-inference.html">The Organization of Inference</a>（2609.20449）与 <a href="research/agent-harnesses.html">How Do Agent Harnesses Create Value?</a>（2609.20474）。</span>
-        </div>
-      </li>
-      <li>
-        <div class="date">
-          <span data-lang="en">Feb 2026</span>
-          <span data-lang="zh">2026 年 2 月</span>
-        </div>
-        <div class="entry">
-          <span data-lang="en"><a href="research/delegation-rights.html">Delegation Rights</a> working paper completed.</span>
-          <span data-lang="zh"><a href="research/delegation-rights.html">Delegation Rights</a> 工作论文完成。</span>
-        </div>
-      </li>
-    </ul>
+  <section class="news-section shell railed" id="news" aria-label="News">
+    <div class="section-kicker">
+      <span class="n">03</span>
+      <span data-lang="en">News</span><span data-lang="zh">动态</span>
+    </div>
+    <div>
+      <ul class="news">
+        <li>
+          <div class="date"><span data-lang="en">Sep 17, 2026</span><span data-lang="zh">2026 年 9 月 17 日</span></div>
+          <div class="entry">
+            <span data-lang="en">Three papers posted to arXiv: <a href="research/organization-of-inference.html">The Organization of Inference</a> (2609.20449), <a href="research/agent-harnesses.html">How Do Agent Harnesses Create Value?</a> (2609.20474), and <a href="research/welfare-opaque-income.html">Welfare-Opaque Income</a> (2609.20425).</span>
+            <span data-lang="zh">三篇论文上线 arXiv：<a href="research/organization-of-inference.html">The Organization of Inference</a>（2609.20449）、<a href="research/agent-harnesses.html">How Do Agent Harnesses Create Value?</a>（2609.20474）与 <a href="research/welfare-opaque-income.html">Welfare-Opaque Income</a>（2609.20425）。</span>
+          </div>
+        </li>
+        <li>
+          <div class="date"><span data-lang="en">Jun 30, 2026</span><span data-lang="zh">2026 年 6 月 30 日</span></div>
+          <div class="entry">
+            <span data-lang="en"><a href="research/delegation-rights.html">Delegation Rights</a> posted to arXiv (2606.31935, econ.EM).</span>
+            <span data-lang="zh"><a href="research/delegation-rights.html">Delegation Rights</a> 上线 arXiv（2606.31935，econ.EM）。</span>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
 
-  <section>
-    <h2>
-      <span data-lang="en">People</span>
-      <span data-lang="zh">成员</span>
-    </h2>
-    <div class="people">
-      <div class="person">
-        <div class="name">Yukun Zhang</div>
-        <div class="affil">
-          <span data-lang="en">The Chinese University of Hong Kong</span>
-          <span data-lang="zh">香港中文大学</span>
+  <section class="team shell railed" id="team" aria-labelledby="team-title">
+    <div class="section-kicker">
+      <span class="n">04</span>
+      <span data-lang="en">Authors</span><span data-lang="zh">作者</span>
+    </div>
+    <div>
+      <h2 id="team-title">Yukun Zhang</h2>
+      <p class="lead-note">
+        <span data-lang="en">The four papers in this series are coauthored by Yukun Zhang and Kemu Xu; three are also coauthored by Yishen Chen. For author order, original abstracts, and current versions, consult the individual arXiv records.</span>
+        <span data-lang="zh">本专题的四篇论文由 Yukun Zhang 与 Kemu Xu 合作完成，其中三篇还与 Yishen Chen 合作。各篇论文的作者顺序、摘要原文及最新版本以对应的 arXiv 页面为准。</span>
+      </p>
+      <div class="people">
+        <div class="person">
+          <div class="name">Yukun Zhang</div>
+          <div class="affil"><span data-lang="en">The Chinese University of Hong Kong</span><span data-lang="zh">香港中文大学</span></div>
+          <div class="mail"><a href="mailto:215010026@link.cuhk.edu.cn">215010026@link.cuhk.edu.cn</a></div>
         </div>
-        <div class="mail"><a href="mailto:215010026@link.cuhk.edu.cn">215010026@link.cuhk.edu.cn</a></div>
-      </div>
-      <div class="person">
-        <div class="name">Kemu Xu</div>
-        <div class="affil">
-          <span data-lang="en">University of Edinburgh</span>
-          <span data-lang="zh">爱丁堡大学</span>
+        <div class="person">
+          <div class="name">Kemu Xu</div>
+          <div class="affil"><span data-lang="en">University of Edinburgh</span><span data-lang="zh">爱丁堡大学</span></div>
+          <div class="mail"><a href="mailto:s2749200@ed.ac.uk">s2749200@ed.ac.uk</a></div>
         </div>
-        <div class="mail"><a href="mailto:s2749200@ed.ac.uk">s2749200@ed.ac.uk</a></div>
-      </div>
-      <div class="person">
-        <div class="name">Yishen Chen</div>
-        <div class="affil">
-          <span data-lang="en">The Chinese University of Hong Kong, Shenzhen</span>
-          <span data-lang="zh">香港中文大学（深圳）</span>
+        <div class="person">
+          <div class="name">Yishen Chen</div>
+          <div class="affil"><span data-lang="en">The Chinese University of Hong Kong, Shenzhen</span><span data-lang="zh">香港中文大学（深圳）</span></div>
+          <div class="mail"><a href="mailto:yishenchen@link.cuhk.edu.cn">yishenchen@link.cuhk.edu.cn</a></div>
         </div>
-        <div class="mail"><a href="mailto:yishenchen@link.cuhk.edu.cn">yishenchen@link.cuhk.edu.cn</a></div>
       </div>
     </div>
   </section>
+
+  <div class="closing-wrap">
+    <section class="closing shell railed" aria-labelledby="closing-title">
+      <div class="section-kicker">
+        <span class="n">05</span>
+        <span data-lang="en">Research agenda</span><span data-lang="zh">研究议程</span>
+      </div>
+      <div>
+        <h2 id="closing-title">
+          <span data-lang="en">Making delegated action an economic object of study.</span>
+          <span data-lang="zh">让委托执行成为可以研究的经济关系。</span>
+        </h2>
+        <p>
+          <span data-lang="en">The four papers examine delegated action through rights, production, verification, and welfare measurement. Their models and experiments illuminate different parts of this research agenda. A common causal link from rights and internal workflows to external welfare outcomes remains a question for future research.</span>
+          <span data-lang="zh">四篇论文分别从权利配置、组织生产、结果验证与福利衡量切入，构成相互关联的研究议程。各自的模型与实验揭示了不同环节；权利安排、内部工作流和外部福利结果之间的共同因果链，仍有待进一步检验。</span>
+        </p>
+      </div>
+    </section>
+  </div>
 
 </main>
 
-<footer class="site">
-  <div class="wrap-wide">
-    <span>AI Agent Economics</span>
+<footer class="footer">
+  <div class="shell">
+    <span>© 2026 Yukun Zhang · AI Agent Economics</span>
     <span>
-      <span data-lang="en">Last updated September 2026</span>
-      <span data-lang="zh">最后更新于 2026 年 9 月</span>
+      <span data-lang="en">For full texts and current versions, follow the paper links.</span>
+      <span data-lang="zh">论文全文及最新版本请见各论文链接。</span>
     </span>
   </div>
 </footer>
